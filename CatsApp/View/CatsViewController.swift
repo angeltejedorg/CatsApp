@@ -33,16 +33,16 @@ class CatsViewController: UITableViewController {
             }
         }
     }
+}
 
-    // MARK: - Table view data source
+// MARK: - Table view data source
 
+extension CatsViewController {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         return viewModel.cats.value?.count ?? 0
     }
-}
-
-extension CatsViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cat = viewModel.cats.value?[indexPath.row]
