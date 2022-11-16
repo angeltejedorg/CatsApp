@@ -26,7 +26,6 @@ class CatsViewController: UITableViewController {
     func setupBinders() {
         viewModel.cats.bind { cats in
             if let cats = cats {
-                print("llamando")
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
